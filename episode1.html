@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode 1: The Apology - MeIsPyari: A Netflix Original</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/episode.css">
+</head>
+<body>
+    <div id="transition-overlay"></div>
+
+    <!-- Back Button -->
+    <header class="back-header">
+        <a href="dashboard.html" class="back-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Dashboard
+        </a>
+    </header>
+
+    <main class="episode-wrapper">
+        <!-- Text Strike Resolution -->
+        <div class="strike-container">
+            <span id="strike-target" class="strike-text">Janmadin hai kya aapka aaj?</span>
+            <span id="replace-target" class="replace-text">THA!</span>
+        </div>
+
+        <!-- Heartfelt Card -->
+        <article id="apology-card" class="apology-card">
+            <p>Happy belated birthday, Sejal! 🎂 I know ki the gift which I should have given you on 2nd June is late by many days, and I am really, really sorry for that. I know koi bhi excuse enough nahi hoga is mistake ke liye 😔.</p>
+            <p>Sach bataun toh, I had started working on this at the beginning of last month. But phir Ahmedabad happened, uske baad Noida PG shifting, and then the new office... everything kept me so occupied ki yeh delay hota chala gaya. I even thought of showing it to you when we were in Gurgaon, but uss time pe code mein itni problems aa rahi thi ki it just wasn't working 💻🤦‍♂️.</p>
+            <p>I am really sorry once again for being this late. Please enjoy this little thing from my side! 🎁✨</p>
+            <p style="margin-top: 1.5rem; font-weight: 500; font-size: 0.95rem; color: var(--accent-red);">Please click below to unlock the next level and continue your journey!</p>
+            <button id="ep1-finish" class="ep-action-btn">Next Episode</button>
+        </article>
+    </main>
+
+    <script src="js/state.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/episodes.js"></script>
+    <script>
+        EpisodeControllers.initEpisode1();
+    </script>
+</body>
+</html>

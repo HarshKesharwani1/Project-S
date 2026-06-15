@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode 3: The Director's Cut - MeIsPyari: A Netflix Original</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/episode.css">
+</head>
+<body>
+    <div id="transition-overlay"></div>
+
+    <!-- Back Button -->
+    <header class="back-header" id="director-back-header">
+        <a href="dashboard.html" class="back-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Dashboard
+        </a>
+    </header>
+
+    <!-- Interactive Special View (Directly Visible) -->
+    <main id="interactive-special" class="interactive-wrapper">
+        <header class="interactive-header">
+            <div class="interactive-badge">N ORIGINAL INTERACTIVE SPECIAL</div>
+            <h1 class="interactive-title">The Director's Cut</h1>
+            <p class="interactive-desc">Choose a card below to explore different chapters. You must open and view all three to unlock the final loot drop.</p>
+        </header>
+
+        <!-- Netflix Bandersnatch poster grid -->
+        <div class="interactive-grid">
+            <!-- Card 1 -->
+            <button class="interactive-card" data-card="1">
+                <div class="card-bg-overlay"></div>
+                <div class="card-num">1</div>
+                <h3 class="card-title">The Blooper Reel<br><span>(My Bad)</span></h3>
+                <span class="card-status-badge">Unread</span>
+            </button>
+
+            <!-- Card 2 -->
+            <button class="interactive-card" data-card="2">
+                <div class="card-bg-overlay"></div>
+                <div class="card-num">2</div>
+                <h3 class="card-title">The End Credits<br><span>(Thank You)</span></h3>
+                <span class="card-status-badge">Unread</span>
+            </button>
+
+            <!-- Card 3 -->
+            <button class="interactive-card" data-card="3">
+                <div class="card-bg-overlay"></div>
+                <div class="card-num">3</div>
+                <h3 class="card-title">Season 2 Teaser<br><span>(My Requests)</span></h3>
+                <span class="card-status-badge">Unread</span>
+            </button>
+        </div>
+
+        <!-- Loot Drop Button (Initially hidden/faded) -->
+        <div id="loot-drop-container" class="loot-drop-container" style="display: none; opacity: 0;">
+            <button id="claim-loot-btn" class="ep-action-btn pulse-glow">Claim Loot Drop</button>
+        </div>
+    </main>
+
+    <!-- Zoom Overlays -->
+    <!-- Overlay 1: Blooper Reel -->
+    <div id="zoom-overlay-1" class="zoom-overlay">
+        <div class="zoom-content-box">
+            <button class="zoom-back-btn">&larr; Back to Choices</button>
+            <div class="zoom-badge">Chapter 1</div>
+            <h2 class="zoom-title">The Blooper Reel (My Bad)</h2>
+            <div class="zoom-text-body">
+                <p>Mistakes I committed after we became friends ki agar list banayein, toh bahut hi zyada lambi ho jayegi 📜. Kyunki kai baar I joke about something thinking ki wo funny hai, but wo actually funny nahi hota 🤦‍♂️. Kai baar main galat time pe joke kar deta hoon, aur agar tumhara mood thoda kharab hota hai, toh mere jokes se aur zyada kharab ho jata hai 😬. Aur fir mere mood swings... unka toh kya hi bolu, ladkiyon se zyada mood swings toh mereko ho jate hain 🎢. And last but not the least, my overthinking! 🧠 Uska toh kya hi bolu. Jitna tumko maine pareshaan kiya hai, utna shayad hi tumko kisi aur ne kiya hoga, aur na hi maine kisi aur ko kiya hai.</p>
+                <p style="margin-top: 1.5rem; margin-bottom: 1rem;">Par sach bolu toh main koi safai nahi dunga isme. Bas 3 cheezein kehna chahunga:</p>
+                <ul class="teaser-list">
+                    <li>You are the only person in the world who has seen my most vulnerable side (not even Raj!), only because you hold a very special place in my life ❤️.</li>
+                    <li>I am really sorry 🥺.</li>
+                    <li>Ki jab tak dosti hai, tab tak toh in cheezon se thoda bahut pareshaan karta hi rahunga! 👻😂</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay 2: End Credits -->
+    <div id="zoom-overlay-2" class="zoom-overlay">
+        <div class="zoom-content-box">
+            <button class="zoom-back-btn">&larr; Back to Choices</button>
+            <div class="zoom-badge">Chapter 2</div>
+            <h2 class="zoom-title">The End Credits (Thank You)</h2>
+            <div class="zoom-text-body">
+                <p>Kisi mahaan kavi ne kaha hai (abhi main us kavi ka naam bhool gaya hoon, but kya kaha hai is important)—ki ek ladki ko dost banake apne paas humesha rakhna chahiye, kyunki wo kuch sikhaye na sikhaye, shaoor zaroor sikha deti hai 😌. Aur meri zindagi mein wo 'vyakti vishesh' aap hain, jisne mereko kaise bolna chahiye, kya kab bolna chahiye, aur bhi kai bhinn-bhinn prakar ki cheezein sikhayi hain. Aapko pata nahi hoga ki aapne sikhaya hai, but sikhaya hai! 🧐</p>
+                
+                <p style="margin-top: 1.5rem; margin-bottom: 0.5rem; font-weight: bold; color: var(--text-primary);">Jaise ki:</p>
+                <ul class="teaser-list" style="margin-bottom: 1.5rem;">
+                    <li>Jab bhi aap poore mood se kuch serious bata rahi hon, aur main beech mein bol doon, toh maine gaali khayi hai 🤐. Toh isse ye samajh aa gaya ki beech mein nahi bolna chahiye!</li>
+                    <li>Jab bhi kisi case mein samne wali mahila mitr ne apko dost ko clean chit de di ho, toh kripa karke apne dost ko bhi clean chit dilane ki koshish na karein 🛑🙅‍♂️.</li>
+                    <li>Mahila mitr is always right! Agar usne bola hai ki usne haathi udta dekha hai, toh aapko kehna chahiye, 'Haan, maine toh uski sawaari bhi ki hai!' 🐘✈️😂</li>
+                </ul>
+
+                <p>Chalo, jokes aside. I know I rarely say thank you to you, but I want to say thank you very much, Sejal. Thank you for controlling my overthinking problem 🧠, for being there at times when most people just disappear 🫂, and for being the person who genuinely gets happy about my achievements 🌟.</p>
+                
+                <p style="margin-top: 1.25rem;">Before we started talking, I had faced multiple betrayals from friends. I literally thought after that ki I will not make anyone a friend anymore; everyone will just be a classmate, colleague, or an acquaintance. But when I saw your behavior towards me and towards your other friends, I got my trust in friendship back ❤️🩹.</p>
+                
+                <p style="margin-top: 1.25rem;">And yes, I forgot the most important point—thank you for keeping my vulnerable side safe with you 🔐. Thank you for bearing with me, my jokes, and sometimes my totally out-of-context text messages 📱😅.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay 3: Season 2 Teaser -->
+    <div id="zoom-overlay-3" class="zoom-overlay">
+        <div class="zoom-content-box">
+            <button class="zoom-back-btn">&larr; Back to Choices</button>
+            <div class="zoom-badge">Chapter 3</div>
+            <h2 class="zoom-title">Season 2 Teaser (My Requests)</h2>
+            <div class="zoom-text-body">
+                <p>Aage aane wale saalon ke liye, I just want ki humara bond itna strong ho jaye ki tum chah kar bhi mujhe ignore na kar pao 😉. Humari calls, VCs, aur mulakatein itni frequent honi chahiye ki you actually start missing me the moment we hang up. Yeh jo hum saal-saal bhar mein mil rahe hain na, ab isse kaam nahi chalega—you definitely need to see this face more often! 😎 Ab se Delhi aao toh tumhare schedule mein meri VIP booking honi chahiye. Aur main toh Pune aata hi rahunga tumhe tang karne ke excuses dhoondh ke... at least until you finally give in and take that transfer to Delhi permanently! 😏🤞✨</p>
+                
+                <p style="margin-top: 1.25rem;">And yes, there is a small request on board 😊😌: Sejal, I know sometimes my behavior towards you becomes very weird, which at some point might have hurt you—bhale hi wo pehle kai baar hua ho ya recently. But it just happens when my overthinking takes over my mind, and I get this fear ki I will lose the person or that they will drift away. Isiliye my texts get weird, my mind stops working, and I just start texting anyone on my list ki koi mere se baat karta rahe. And I just want to request you: agar aisa kabhi ho, toh please... tumhara mereko daantne ka mann kare daant lo, gaali deni ho gaali de lo, in fact, maarna-peetna ho toh you can do that too! But yaar, bas uss samay thodi der meri bak-bak sun liya karo 🥺🙏.</p>
+                
+                <p style="margin-top: 1.25rem;">And I know ki yeh sentence thoda ajeeb sound karega, and I also know ki aisa kabhi nahi hoga, but please... kabhi trust mat todna. Kyunki sach bolun toh, while overthinking, I have thought of every possible situation, but the one thing I cannot even imagine is how I will survive if you and that mota guy break my trust. Because like I always say, you two are the last people I trust blindly 🔐❤️.</p>
+                
+                <p style="margin-top: 1.25rem; font-style: italic; color: var(--text-secondary);">Chalo, serious baatein bahut ho gayi hain! Ab haan, itna thank you thank you bol diya hai toh chane ke jhaad pe mat chadh jana! 🌴🐒😂🙌🏃‍♂️💨</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/state.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/episodes.js"></script>
+    <script>
+        EpisodeControllers.initEpisode3();
+    </script>
+</body>
+</html>

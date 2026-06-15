@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Series - MeIsPyari: A Netflix Original</title>
+    <link rel="stylesheet" href="css/global.css">
+</head>
+<body class="bg-black text-white">
+    <div id="transition-overlay"></div>
+    <div class="flex items-center justify-center h-screen">
+        <div class="loading-spinner"></div>
+    </div>
+    
+    <script src="js/state.js"></script>
+    <script src="js/transition.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const state = AppState.get();
+            if (state.user.isLoggedIn) {
+                PageTransition.to("profile.html");
+            } else {
+                PageTransition.to("signup.html");
+            }
+        });
+    </script>
+</body>
+</html>

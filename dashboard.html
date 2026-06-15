@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeIsPyari: A Netflix Original</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <div id="transition-overlay"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="dashboard.html" class="nav-logo">NETFLIX</a>
+        <a href="profile.html" class="nav-profile">
+            <span style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Sejal</span>
+            <div class="nav-avatar">S</div>
+        </a>
+    </nav>
+
+    <!-- Hero Banner -->
+    <header class="hero">
+        <div class="hero-badge">
+            <span>N</span> ORIGINAL SERIES
+        </div>
+        <h1 class="hero-title">MeIsPyari: A Netflix Original</h1>
+        <p class="hero-desc">An interactive journey through memories, letters, and heartfelt confessions. Locked progression awaits - can you complete the series?</p>
+        <button id="play-hero" class="hero-btn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            Play Episode 1
+        </button>
+    </header>
+
+    <!-- Episodes Grid -->
+    <main class="row">
+        <h2 class="row-title">Episodes</h2>
+        <div class="episode-container">
+            <!-- Episode 1 -->
+            <a href="episode1.html" id="ep-1" class="episode-card">
+                <div class="thumbnail-wrapper">
+                    <img src="assets/images/ep1.png" alt="The Apology" class="thumbnail-img">
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="episode-info">
+                    <div class="ep-number">Episode 1</div>
+                    <h3 class="ep-title">The Apology</h3>
+                    <p class="ep-desc">A sincere and heartfelt apology from the creators. The beginning of a long resolution.</p>
+                </div>
+            </a>
+
+            <!-- Episode 2 (Memory Vault) -->
+            <a href="episode2.html" id="ep-2" class="episode-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="assets/images/ep3.png" alt="The Memory Vault" class="thumbnail-img">
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <div class="locked-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>LOCKED</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="episode-info">
+                    <div class="ep-number">Episode 2</div>
+                    <h3 class="ep-title">The Memory Vault</h3>
+                    <p class="ep-desc">Unlock a collection of core memories, dynamic galleries, and a beautifully formatted letter.</p>
+                </div>
+            </a>
+
+            <!-- Episode 3 (The Director's Cut) -->
+            <a href="episode3.html" id="ep-3" class="episode-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="assets/images/ep4.png" alt="The Director's Cut" class="thumbnail-img">
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <div class="locked-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>LOCKED</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="episode-info">
+                    <div class="ep-number">Episode 3</div>
+                    <h3 class="ep-title">The Director's Cut</h3>
+                    <p class="ep-desc">Netflix-style interactive choice special. Explore the categories to unlock the next level.</p>
+                </div>
+            </a>
+
+            <!-- Episode 4 (The Friendship Audit) -->
+            <a href="episode4.html" id="ep-4" class="episode-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="assets/images/ep2.png" alt="The Friendship Audit" class="thumbnail-img">
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <div class="locked-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>LOCKED</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="episode-info">
+                    <div class="ep-number">Episode 4</div>
+                    <h3 class="ep-title">The Friendship Audit</h3>
+                    <p class="ep-desc">Sleek documentary-style page. Scan the barcode and click the button to take the exam.</p>
+                </div>
+            </a>
+
+            <!-- Episode 5 (The Grand Finale) -->
+            <a href="episode5.html" id="ep-5" class="episode-card locked">
+                <div class="thumbnail-wrapper">
+                    <img src="assets/images/hero.png" alt="The Grand Finale" class="thumbnail-img">
+                    <div class="play-overlay">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </div>
+                    <div class="locked-overlay">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                        </svg>
+                        <span>LOCKED</span>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="episode-info">
+                    <div class="ep-number">Episode 5</div>
+                    <h3 class="ep-title">The Grand Finale</h3>
+                    <p class="ep-desc">The ultimate birthday celebration. Lights, music, confetti, and final wishes.</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer Controls -->
+    <footer class="dashboard-footer">
+        <button id="reset-progress" class="reset-btn">Reset Series Progress</button>
+    </footer>
+
+    <script src="js/state.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

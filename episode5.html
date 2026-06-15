@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Episode 5: The Grand Finale - MeIsPyari: A Netflix Original</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/episode.css">
+</head>
+
+<body>
+    <div id="transition-overlay"></div>
+
+    <!-- Back Button -->
+    <header class="back-header">
+        <a href="dashboard.html" class="back-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="19" y1="12" x2="5" y2="12"></line>
+                <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back to Dashboard
+        </a>
+    </header>
+
+    <!-- Confetti Overlay -->
+    <canvas id="confetti-canvas"></canvas>
+
+    <main class="episode-wrapper" style="position: relative; overflow: hidden;">
+        <div class="finale-card">
+            <div class="completion-badge">Series Complete</div>
+            <h1 class="finale-title">Happy Birthdaay Sejal 😇😇</h1>
+
+            <!-- CSS Animated Birthday Cake -->
+            <div class="cake-container">
+                <div class="candle">
+                    <div class="flame"></div>
+                </div>
+                <div class="cake"></div>
+            </div>
+
+            <div class="finale-wishes-body"
+                style="text-align: left; margin-top: 1.5rem; max-height: 350px; overflow-y: auto; padding-right: 10px; margin-bottom: 2rem; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05); padding-top: 1.5rem; padding-bottom: 1rem;">
+                <p class="wish-text"
+                    style="font-size: 1.25rem; font-weight: 800; text-align: center; color: var(--accent-red); margin-bottom: 1.5rem; margin-top: 0;">
+                    Happy Birthdaay Sejal 😇😇</p>
+                <p class="wish-text"
+                    style="font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.7; color: var(--text-secondary);">
+                    I pray to God to give you all the happiness in the world and fulfill all your wishes—jismein of
+                    course sabse top pe yehi wish honi chahiye ki mere jaisa best friend tumhe zindagi bhar milta rahe!
+                    😉😎</p>
+                <p class="wish-text"
+                    style="font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.7; color: var(--text-secondary);">
+                    School ke un dino se jahan humari rarely baat hoti thi, to becoming the girl who holds all my
+                    deepest secrets 🤫 aur jisne mujhe asal mein 'shaoor' sikhaya... humara safar kaafi crazy raha hai.
+                    From those fights that only made our bond tighter 🤝, to those long calls and texts where you
+                    patiently handle my overthinking and listen to my bak-bak 🗣️, I honestly wouldn't trade any of it.
+                    Pata hi nahi chala kab wo rarely baat karne wali ladki meri life ki sabse special friend ban gayi
+                    ❤️✨.</p>
+                <p class="wish-text"
+                    style="font-size: 1.05rem; margin-bottom: 1.25rem; line-height: 1.7; color: var(--text-secondary);">
+                    So here is to you—my favorite person to annoy, the one I trust blindly, and the absolute best part
+                    of all my 'firsts'. Khush raho, tarakki karo, aur jaldi se Delhi ka permanent transfer le lo so I
+                    don't have to keep making up excuses to come to Pune just to see you! (Waise bahane banane mein koi
+                    problem nahi hai, but still... aa jao Delhi 😏🤞).</p>
+                <p class="wish-text"
+                    style="font-size: 1.20rem; font-weight: 700; text-align: center; color: var(--accent-red); margin-top: 1.5rem; margin-bottom: 0.5rem;">
+                    Happy Birthdaay once again! 😇😇 Let's make countless more memories.</p>
+            </div>
+
+            <a href="dashboard.html" class="ep-action-btn" style="margin-top: 0;">Return to Dashboard</a>
+        </div>
+    </main>
+
+    <script src="js/state.js"></script>
+    <script src="js/transition.js"></script>
+    <script src="js/episodes.js"></script>
+    <script>
+        EpisodeControllers.initEpisode5();
+    </script>
+</body>
+
+</html>
