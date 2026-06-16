@@ -10,8 +10,8 @@
 <body>
     <div id="transition-overlay"></div>
 
-    <!-- Back Button -->
-    <header class="back-header">
+    <!-- Back Button & Music Toggle -->
+    <header class="back-header" style="display: flex; justify-content: space-between; width: 100%; align-items: center; padding: 1.5rem 4%;">
         <a href="dashboard.html" class="back-link">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -19,6 +19,7 @@
             </svg>
             Back to Dashboard
         </a>
+        <button class="music-toggle-btn" onclick="AmbientMusic.toggle()" title="Toggle Ambient Music"></button>
     </header>
 
     <main class="episode-wrapper">
@@ -64,6 +65,7 @@
     </main>
 
     <script src="js/state.js"></script>
+    <script src="js/music.js"></script>
     <script src="js/transition.js"></script>
     <script src="js/episodes.js"></script>
     <script>

@@ -13,10 +13,13 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <a href="dashboard.html" class="nav-logo">NETFLIX</a>
-        <a href="profile.html" class="nav-profile">
-            <span style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Sejal</span>
-            <div class="nav-avatar">S</div>
-        </a>
+        <div style="display: flex; align-items: center; gap: 1.25rem;">
+            <button class="music-toggle-btn" onclick="AmbientMusic.toggle()" title="Toggle Ambient Music"></button>
+            <a href="profile.html" class="nav-profile">
+                <span style="color: var(--text-secondary); font-size: 0.95rem; font-weight: 500;">Sejal</span>
+                <div class="nav-avatar">S</div>
+            </a>
+        </div>
     </nav>
 
     <!-- Hero Banner -->
@@ -62,6 +65,13 @@
             <a href="episode2.html" id="ep-2" class="episode-card locked">
                 <div class="thumbnail-wrapper">
                     <img src="assets/images/ep3.png" alt="The Memory Vault" class="thumbnail-img">
+                    <!-- Slideshow rotation images for hover preview -->
+                    <div class="hover-slideshow">
+                        <img src="assets/images/1 chat.jpeg" class="hover-slide-img">
+                        <img src="assets/images/5 sept 2021.jpeg" class="hover-slide-img">
+                        <img src="assets/images/garba .jpeg" class="hover-slide-img">
+                        <img src="assets/images/pryj 2026.jpeg" class="hover-slide-img">
+                    </div>
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
@@ -116,6 +126,8 @@
             <a href="episode4.html" id="ep-4" class="episode-card locked">
                 <div class="thumbnail-wrapper">
                     <img src="assets/images/ep2.png" alt="The Friendship Audit" class="thumbnail-img">
+                    <!-- Scanner sweep effect for hover preview -->
+                    <div class="hover-laser-line"></div>
                     <div class="play-overlay">
                         <svg viewBox="0 0 24 24">
                             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
@@ -174,6 +186,7 @@
     </footer>
 
     <script src="js/state.js"></script>
+    <script src="js/music.js"></script>
     <script src="js/transition.js"></script>
     <script src="js/dashboard.js"></script>
 </body>

@@ -72,3 +72,42 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+/* Ambient Music Toggle Button */
+.music-toggle-btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    color: var(--text-primary);
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    outline: none;
+    flex-shrink: 0;
+}
+
+.music-toggle-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+    border-color: var(--text-primary);
+    transform: scale(1.05);
+}
+
+.music-toggle-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.music-toggle-btn.muted {
+    border-color: rgba(229, 9, 20, 0.4);
+    color: var(--accent-red);
+}
+
+.music-toggle-btn.muted:hover {
+    background-color: rgba(229, 9, 20, 0.1);
+    border-color: var(--accent-red);
+}
+

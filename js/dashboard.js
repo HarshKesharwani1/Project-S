@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    // 5. Setup Card Hover Previews
+    setupHoverPreviews();
 });
 
 function renderEpisodes(state) {
@@ -123,4 +126,42 @@ function setupEpisodeCard(cardId, isLocked, epState) {
         const targetUrl = card.getAttribute("href");
         PageTransition.to(targetUrl);
     });
+}
+
+function setupHoverPreviews() {
+    const ep2Card = document.getElementById("ep-2");
+    if (ep2Card) {
+        let intervalId = null;
+        const slides = ep2Card.querySelectorAll(".hover-slide-img");
+        let currentSlide = 0;
+
+        const startSlideshow = () => {
+            if (slides.length === 0) return;
+            // Clear all active classes
+            slides.forEach(s => s.classList.remove("active"));
+            slides[0].classList.add("active");
+            currentSlide = 0;
+
+            intervalId = setInterval(() => {
+                slides[currentSlide].classList.remove("active");
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add("active");
+            }, 1000);
+        };
+
+        const stopSlideshow = () => {
+            if (intervalId) {
+                clearInterval(intervalId);
+                intervalId = null;
+            }
+            slides.forEach(s => s.classList.remove("active"));
+        };
+
+        ep2Card.addEventListener("mouseenter", () => {
+            if (!ep2Card.classList.contains("locked")) {
+                startSlideshow();
+            }
+        });
+        ep2Card.addEventListener("mouseleave", stopSlideshow);
+    }
 }

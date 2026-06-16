@@ -454,3 +454,60 @@
     20%, 60% { transform: translateX(-8px); }
     40%, 80% { transform: translateX(8px); }
 }
+
+/* Hover Slideshow styles */
+.hover-slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.episode-card:not(.locked):hover .hover-slideshow {
+    opacity: 1;
+}
+
+.hover-slide-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.hover-slide-img.active {
+    opacity: 1;
+}
+
+/* Hover Laser Line Scanner styles */
+.hover-laser-line {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--accent-red);
+    box-shadow: 0 0 10px var(--accent-red), 0 0 4px var(--accent-red);
+    opacity: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.episode-card:not(.locked):hover .hover-laser-line {
+    opacity: 1;
+    animation: dashboardScanning 2s linear infinite;
+}
+
+@keyframes dashboardScanning {
+    0% { top: 0%; }
+    50% { top: 100%; }
+    100% { top: 0%; }
+}
+
